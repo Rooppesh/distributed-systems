@@ -90,7 +90,7 @@ async def main():
 
     heapify(heap)
 
-    outputFile = open(outputPath + '/sorted.txt', 'w+')
+    outputFile = open(outputPath + '/async_sorted.txt', 'w+')
 
     while (len(heap) > 0):
         currNode = heappop(heap)
