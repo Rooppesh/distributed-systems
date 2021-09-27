@@ -1,0 +1,5 @@
+Flask
+marshmallow
+apispec
+apispec-fromfile
+apispec-webframeworks
