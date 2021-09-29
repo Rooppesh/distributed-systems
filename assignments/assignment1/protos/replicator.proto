@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+import "google/protobuf/struct.proto";
+
+service Replicator {
+  rpc ReplicateInMongoDB (PostgresDBRequest) returns (MongoDBReply) {}
+}
+
+message PostgresDBRequest {
+  string message = 1;
+}
+
+message MongoDBReply {
+  string message = 1;
+}
+
