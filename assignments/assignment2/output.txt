@@ -1,0 +1,181 @@
+1. Shorten a Link 
+
+Request:
+curl --location --request POST 'http://127.0.0.1:5000/shorten' \
+--header 'Content-Type: application/json' \
+--header 'Cookie: session=.eJzVWdtuq0YU_ZXKD31pQuZ-QTqqVKntB7R9io4swNjGxkBscIyP8u8dYKwYGMhMTs9Do7x4z4JZs_eefePbIkxKL62fEMium93C_7ZYxXGRJtn-tPCfvzXLzY-FPwA-LKJjHJTxSq1AhjERSEqkxId8layTofzt68MizbPNsjqmamVblsXJf3ra5Pkmjb0oPyzeHm47YFKFxWFMJSgK9XiyLIJyq96xeBiT04_ek0MAwUcIHiH8CUqfCJ8gD0AllQq2qZIG81sAwwjh1e_kDyVMslMZpOmyrIu42-cm6cj3Dznz_o8P_bAog01zOoUs1WHa_e40Ea8O1d7CKBo4dW7uY-Bj6GEiKYPT_Ac4J6O9bk4ng9HGVDvg0H-Uk2DAxv6j5S5UaIWELCyoaODYlTEkBipa7kKFsRTVNrdKA6cNCJBPpMcx5AjPGbCHc6HKI3kBqQVVDTRT_RsyHyMfUA9BTCGZojrCOVGttxELbKh2QIOBgTDGqlbuQiVYpefXjQUVDTT5GgVmX1NyJyqnfVKvwqlAo1FhXoH0bEFYA6fMzH2EfUQ8CiiiaNrMA5zLgaIsTamNR2rgOKRgyaEppLRyFyqrbQ2v1Ycp6elU5sf412T1BSJMKDOlKP2qqZsufMB9ij3BVAaxTVHFMT_kZbzU4lHGup2tSIPaez9gR_dJHeL0tIrLIElPDXe14jW0a0-t_LxNv8TZ8p-_poPOgLJD1mu1U6vfQZEs7lLgny32Xv9lcT7lA_0bPEHjTMWJ-Za18jcHR6hQub5Y-KQGmu474ub7ruROPllXL3VpQ6UDmpSChFkpSu5CZc2zfWCT5jRwOneo-glxj6v7SeRc7ujhXKhuihMDkQVVDZzJyNQHwMOIsGmqI5wL1S0L6timjtFAQ_xjmBrjXyN3orLOE2GT5jRw2sAUN_UJhQKCmawxwDlR3eSr3dEYHfTSHbnW3zlkgNxTeZfevTarzjtDBhhv0gGNF19OXHxHv7iSa0htqHTAaWMg7kPsQYgIBHPG6OFcqCaJECgwGkMvGYxB-ccJZGwsyu-2LVBcEAsNaaCpQDQ1I1ruooFdvD4m8aeaWf3oTKUgfYA9Ronk9L9vZgfvdzn0Xvn0K7TQvwbO9BKqsqAe4AwJMeehPZwT1VNRXhIbqh1wtsWGKs5Dihifywc9nAvVFMl0bdP2aOA0VcTUtfEAogDPpq4ezoXqIQ93OxsH0MCZLEt8jD0VdyidHVz0cE5Ujyy5rm2odkBjM2nu4Bq5C5WsPqQgMUZLvWSIlkJ8JloK8b5tLigIN3fPrsN-z_iCWCr5B43lEYNXbAh0o6NooKFaEdKQILXcRY_Hyz7IuA2VDjhTrRCfUBUBkWCz5WgP50L1fACQ2-RyDZwdEAHmcarqzNnw08M5Ub0KXtiUoxpoMDDF5na8kbtQeQ34Nd1aUNHAMRUCADFRaeVOVF4oe8UNleAYbZNz-65mwzSJs3LZZuRmGBBQFnIhoxWIu9nAesO3QgK4Uz_3B0IzdqeyZVC2hgPsEeBHiNoiTPqE_QLU3x0urBUu2gZVFsVNIx1Vqqc_LLUi2h77Rv-GalvCPKoOil9QJnnWdN7fPdbQepguVjD0ofQEYALi_8lYo0e5cQpXa6aNxrdFsFJ-0NoiqepyHZ3D3XZDGReLHzAqucBdWNqkXg00Tc2QcRDfyl3uxkWIMxxObYxUOqCBChFmKo3ciUpWrXdXGyodcKbMYz6BniJB6eR0e4RzoloVDH3u85d-dLZjwNRTOpQY_KCO4f393_35q8YvZQwsjKaB00ZT_6RpYBnjs8mxh3Mx2pXFKbMZxmmg6dYNx0h3cicqLwmh2IZKBzQVYmKiEBOOVC5ndLLpWDTQRMX0JU7LrahEeaXycNj_SgkH8tvHLzCQ3-b-z716T_l58--pSpqqeu_r4KHb3I4O5LeuGA3kt3L1eVhUUh9LDxHC2rp4tKgaXqluGuCDReXGih7xVAeCJDAtIhWYJANtIh4vIg9gQBkZHexWAeKB_Bbnh9q73d_n8SYqSnBAZRtCB5-LVM-pVKuyIxtzx7LpnRGUhCDjoupWGYeYLb6-_Qtu_vEr.YWT3ig.wUq7IuwsJY9Pf4fefxWGCb5054o' \
+--data-raw '{
+  "long_url": "https://google.com",
+  "domain": "bit.ly",
+  "group_guid": "Ba1bc23dE4F"
+}'
+
+Response:
+{
+    "deeplinks": [
+        {
+            "app_uri_path": "",
+            "bitlink": "bit.ly/34ubpm",
+            "created": "2021-10-11 19:48:42.012029",
+            "guid": "Ba1bc23dE4F",
+            "install_type": "",
+            "install_url": "",
+            "modified": "2021-10-11 19:48:42.012029"
+        }
+    ],
+    "long_url": "https://google.com",
+    "tags": []
+}
+
+2. Create a Bitlink
+
+Request:
+curl --location --request POST 'http://127.0.0.1:5000/create' \
+--header 'Content-Type: application/json' \
+--header 'Cookie: session=.eJydmd2O6jYQx1-l4qJXe4y_7UQ6qlSp7QO0vVodrQIECIQkSwJLWO271yHmLEkmWbvS3jD-Q36ZsefD-z5bJBVK6znF2XWzm4Xvs1UcF2mS7ctZ-PzeLDcfZmFP-DRbHuOoildmhUjGuKZBQI35kK-SddK3f_x4mqV5tnk5HVOzsq2qogzn802eb9IYLfPD7OPp_gQWrw6nvQOKFT6iUEzJN4K_EfILUSHDISOI8UBI0kWb0Hmhvm3K8uCC2gr7XjOuYVgOvWbtPijiRHVQOKBY4TCAjHAAxdp9UKRMae2yl6xwPICYhjxAihFF2VQAOzofVLUMLjh1QLVCGPUfIkNGQywQJUwQPoY60Hmh1tuljFxQWyEQYKzBE3qz-6BEq_T8tnFAsUJorwkM7zVj90Ip90m9WsCyn6pFfsLp2QHYCsfCrELKQsqRwIIKOh7mns7nhZZZmgqXHWmFw5TCAkWglHKz-6CstjW5noYoUVGYrycvRVRtzW_Myyo_xr8lq--EMi5k6_YurP2psZOuQ6xCwZCW2JQLI9uckkbze0QWS8pWf_A_jTHJyipK05eqLmKzWBzzQ17FL9b8IOi-W5FGNfp8wRZ3bl6inK_iKkrSsmE3K6jBrpFZ-XWbfo-zl3__Hk86PeSv_fo0q6JN48Cbd2rzOSqSmflaZT427_PXTfvo_6o4l3nP_8BOsDqoJMOn7Gb_8NgIJ1qtLw570gqh804VfN6N3WtP1qfXunJBaYWQU6iGnWLsPihrle0jlzJnheO1g-uQKqTM-eTBVO3o6HxQN0Up8dIB1QonKrIIMUaMcjmOOtD5oG5lVMcufYwVAvlPMgHmv8buhbLOE-1S5qxwPMCCNf2JIJrgiarR03mhbvLV7ghmB7v0AHfb74pIzB9RPq0PP5udzjugAgwf0grBgx-MHHzPfXHl14VwQWmF48GgKiQMEUI5wVPB6Oh8UJNEaxqBwbBLQDCE-rqADIMl1MNjCxoX3MFDVgg1iNAwYu0-Htib8L4RBxQrnGirTZEVCCtJtZ4KVkfnhVoW1SVxQW2Fk9MmMSmPCCrVVGrs6HxQUxqka5cJwArHUak0OwhhKjCbzOIdnQ_qIV_sdi4bwAonCg4PGUPmCAoxOcN3dF6oR5lc1y6orRCcq-BhprH7oGT1IcUJmDjsEpA4tP4_iUPrz8fmWuDF5uG760V3fHqlMg3UFzPWkeE3Fjv40QqBwq0DoFZYu48fj5d9lCkXlFY4Ubh5yAWSgmo52Zl1dD6o5wMmyqWsWeHkXQmWSAnTck2mn47OC_WqVeHSmVkhEGDB4Mm0sfugvEXqmm4dUKxwiMIx5hDKze6DciG7ReWS6awQmtcpeAV4s3uhaH0m_XkRRGmFAArXMEpj90LJTuvd1QWlFU5UVTP2EGQghBi9VxvofFBr9lrF2AHVCsdRzR9vGkYp1eQJ7Oh8UK8yTqXL8GuF0F7rj20Pdi-U14QL5oLSCqFsr0eyvfZEuZxp6dIWWSGEAt18W7sTyjI_ZdVL778CpGe_Xzbjnv0-8oqe_d5F0579Xt6e-0VIhCxAlHN5q6ODRdMgB5IFWPUWzY7Upn9CpmOhAYYWqTlZgcSEgYsUYYaF5M1lVgf0XjFYz35PVH1H3I_i8_AhTCCFRXDLAb2bVtOjasSk0nLIzoKm16Yk4JyCi6a7lYowOfvx8R9lLS3g.YWTf6Q.pbLiy3wnFzCHBjjLWApzfEN05CI' \
+--data-raw '{
+  "long_url": "https://google.com",
+  "domain": "bit.ly",
+  "group_guid": "Ba1bc23dE4F",
+  "title": "Google",
+  "tags": [
+    "bitly",
+    "api"
+  ],
+  "deeplinks": [
+    {
+      "app_id": "com.bitly.app",
+      "app_uri_path": "/store?id=123456",
+      "install_url": "https://play.google.com/store/apps/details?id=com.bitly.app&hl=en_US",
+      "install_type": "promote_install"
+    }
+  ]
+}'
+
+Response:
+{
+    "deeplinks": [
+        {
+            "app_uri_path": "/store?id=123456",
+            "bitlink": "bit.ly/dhy1zu",
+            "created": "2021-10-11 18:07:53.860299",
+            "guid": "Ba1bc23dE4F",
+            "install_type": "promote_install",
+            "install_url": "https://play.google.com/store/apps/details?id=com.bitly.app&hl=en_US",
+            "modified": "2021-10-11 18:07:53.860299"
+        }
+    ],
+    "long_url": "https://google.com",
+    "tags": [
+        "bitly",
+        "api"
+    ]
+}
+
+3. Update a Bitlink
+
+Request:
+curl --location --request PATCH 'http://127.0.0.1:5000/bitlinks/bit.ly/34ubpm' \
+--header 'Content-Type: application/json' \
+--header 'Cookie: session=.eJztWduOqzYU_ZUqD33pjMd3G6SjSpXafkDbp1EVcUtCQoBJIDPkaP69BpxOAMPYR-rDkRrlhe0FLPZ9219XYVqBrHnCML9u9yv_6ypOkjJL88N55T9_bZfbi5U_Aj6solMSVEmsVhAnhErseViJj0WcbtKx_P3vh1VW5Nt1fcrUyq6qyrP_9LQtim2WgKg4rt4fbm8gtA7LY0slOEW79NI9q31hliZ5tU67R2NCA8ZDIb0ohkl7yfhmK3bSg2ivLg9HynJefvBcB5W6D0PIHyF5RPhPxH3s-ZT_BNXvDhc2ChftgjqPkqaV1-eqOK61Ilqt_Ev_hmpZx0VUHxW_oEqLfKU-d6jHoCzVt6frMqh26vlP6pmn5Oc0_tJTXz1MNa31cK9pDDF6RPARoR-Q4u75RADKpOBEwbZ1p5pfAhRGmMS_0t-UMM3PVZBl66opE7VYnopjUSVrLb4DDA1TZkEDPqzT031SH3F-ipMqSLNzy12tgJZ2A9TKj7vsS5Kv__pj6AQLlFuncLVm1mp8Vwax8oPOFmndVJvoEu53W8aFXH3qaA-rKth2t3bU1XVQpu1tlbpsdfR7h713yCQ-1geL2NDAOYsJn0CfIECoxziaV9MI5xQ7r9vz-WhDtQeOw1jFKoF8GsZa7kKF1Vh6pQUVDZxmFIKogYqWu1DhPMONTXLTwHkDQqxcGAiCBCZLBhzgXKiKyHuDmQVVDTRTbZMbwT5kACPCEJ2jOsE5UW12EQ9sqPZAg4GhNJaMTu5CJYizy-vWgooGmnyNQbOvKbkTlfMhbeJwLvdoVFjUMLtYENbAOTMLHxMfU8AgwwzPm3mEc_mgKM8yZuORGjhNKcQTyJRSOrkLlXjXoGs9pfINxVU_ai7SpQ-FzwiQHKr-5bsoriPKn-vVvRDGVXk5FyP9GzxB40w9ojnKOvm7gyPUuNq8WfikBpriHQtzvCu5k0829UtT2VDpgSalYGlWipK7UNmI_BDYlDkNnK8dVPpYAKHik3pLtWOAc6G6Lc8cRhZUNXChIjMfQkAw5fNUJzgXqjseNIlNH6OBhvzHCTPmv1buRGVTpNKmzGngvIEZafsThiSCC1VjhHOiui3i_cmYHfTSHbnO3wXikN5T-ZDePTavL3tDBZi-pAcaA9-bCXxHv7jSa8hsqPTAeWNg4SMCEMIUwSVjDHAuVNNUShwYjaGXDMZg4vMCMjUWE3evLXFSUgsNaaCpQTQNI1ruooF9sjmlyaedg6lT0LcudAqeDwngjHqCWXYKk9ZgsazfP9_low_Kp1-Rhf41cGGWUJ0FA1BwLOWShw5wTlTPZfWW2lDtgYsjNlJ5HjHMxVI9GOBcqGbYyzY2Y48GzlPFXIUNgJhBsli6BjgXqsci3O9tHEADF6os9QkBKu8wtrhxMcA5UT3x9LqxodoDjcOkeYJr5S5U8uaYwdSYLfWSIVtK-S3ZUsqP1xaSwXB7d-8mHM6ML5hnnvhksDwR-EoMiW7yKRpo6FakZyiQWu6ix9PbIciFDZUeuNCtUJ8ylQGx5Ivt6ADnQvVyhEjY1HINXNwgghwIpvrMxfQzwDlRvUpR2rSjGmgwMCPmcbyVu1B5DcQ121lQ0cApFQohNVHp5E5UXhh_Jf-fGWg9zDcrBPnIAxJyib6PM4MR5e_lzOAN7cPKpvRqoGnXDBs34ju5S2y8SXlB410bI5UeaKBCpZlKK3eikteb_dWGSg9caPO4TxFQJBib3d2e4Jyo1iXHhpMUi4lB37o4MRAGlA49Av-jieHj-Q4bgXcOfaeJhrxUCbQwmgbOG039aTvAci4Wi-MA52K0K08ybrMZp4GmqBtvI93Jnai8pJQRGyo90NSIyZlGTDpSebvgs83EooEmKqaTOC23ohIVtarD4fCE_3nQv3ntdiLjAKuuCLZj5mhRjcEIcEFgt3M7XVTtFJGkO1GaLCIMiKAcwzZpD7noE1M0kt8O4uBIfjuDGHJXMdf-gerqmeo9xy-57SGykfw2oeOR_NY6P48bXOYTD2BKedejTxbV8O2pqIdjBamQUvQoUNMQ9qBpEask6XHYNQXTRQwggYzTyYfdulEykt9qzlh7t1zyPH2JylgCMq9L56OjKzX_KtWqSs2n3InXzvEYeZSOLd8vqsmZC0T46u_3fwCtWI8i.YWT3wQ.r7epTAI9xjBnFLltDBCBEHrwQCA' \
+--data-raw '{
+  "long_url": "https://google.com",
+  "domain": "bit.ly",
+  "group_guid": "Ba1bc23dE4F",
+  "title": "Google",
+  "archived":"",
+  "tags": [
+    "bitly",
+    "api"
+  ],
+  "deeplinks": [
+    {
+      "app_id": "com.bitly.app",
+      "app_uri_path": "/store?id=123456",
+      "install_url": "https://play.google.com/store/apps/details?id=com.bitly.app&hl=en_US",
+      "install_type": "promote_install"
+    }
+  ],
+  "created_at": "2006-03-12T16:29:46+0000",
+  "created_by": "chauncey",
+  "client_id": "1234a56b789cd0e123456fg7h8901j123km45n6p",
+  "custom_bitlinks": [
+    "https://chauncey.ly/documentation"
+  ],
+  "launchpad_ids": [
+    "iuytfcvbjhg5678"
+  ]
+}'
+
+Response:
+{
+    "archived": "",
+    "custom_bitlinks": [
+        "https://chauncey.ly/documentation"
+    ],
+    "deeplinks": [
+        {
+            "app_uri_path": "/store?id=123456",
+            "bitlink": "bit.ly/34ubpm",
+            "created": "2021-10-11 19:49:37.458763",
+            "guid": "Ba1bc23dE4F",
+            "install_type": "promote_install",
+            "install_url": "https://play.google.com/store/apps/details?id=com.bitly.app&hl=en_US",
+            "modified": "2021-10-11 19:49:37.458763"
+        }
+    ],
+    "id": "1234a56b789cd0e123456fg7h8901j123km45n6p",
+    "long_url": "https://google.com",
+    "tags": [
+        "bitly",
+        "api"
+    ]
+}
+
+4. Retrieve a Bitlink
+
+Request:
+curl --location --request GET 'http://127.0.0.1:5000/retrieve' \
+--header 'Content-Type: application/json' \
+--header 'Cookie: session=.eJzVWd2OozYUfpUqF73pjMf_NkirSpXaPkDbq9EqAkISEgJMApmQ1bx7DTiaAIaxZ7sXHc1Njj_sz-ccnx_72yJMSpDWTxhm181u4X9brOK4SJNsf1r4z9-a4ebHwh8AHxbRMQ7KeKVGECeESux5WIkP-SpZJ0P529eHRZpnm2V1TNXItiyLk__0tMnzTRqDKD8s3h5uKxBahcVhTCUoCvV5siyCcqvmWDyMyelP78lhiNEjgo8I_YQ8n0qfYgCRknoKtqmSBvNbgMIIk9Xv9A8lTLJTGaTpsqyLuFvnJunI9zc5M__Hm35YlMGm2Z1Clmoz7Xp3mohXh2pvYRQNnNq38An0CQKEeoyjaf4DnJPRXjenk8FoY6odcOg_ykkI5GP_0XIXKqzC0issqGjg2JUJogYqWu5ChfMU1zanSgOnDQixTz0gCBKYzBmwh3OhKiLvAlMLqhpopvo34j7BPmQAI8IQnaI6wjlRrbcRD2yodkCDgaE0xqpW7kIlWKXn140FFQ00-RqDZl9Tcicqp31Sr8KpQKNRYV7B9GxBWAOnzCx8THxMAYMMMzxt5gHOZUNRlqbMxiM1cBxSiCeQKaS0chcqq22NrtWHKenpVObH-Ndk9QVhQhk3pSg91dRJlz4UPiNAcpVBbFNUccwPeRkvtXiUsW57K9KgBu8b7Og-qU2cnlZxGSTpqeGuRkBDuwZq5Odt-iXOlv_8NR10BpQdsl6rnVr9DopkcZcC_2yx9_ovi_MpH-jf4AkaZypOzKeslb85OEKFy_XFwic10HTesTCfdyV38sm6eqlLGyod0KQULM1KUXIXKmuR7QObNKeB07lD1U9YAKHOJ_XmckcP50J1U5w4jCyoauBMRmY-hIBgyqepjnAuVLc8qGObOkYDDfGPE2aMf43cico6T6RNmtPAaQMz0tQnDEkEZ7LGAOdEdZOvdkdjdNBDd-RafxeIQ3pP5V16N21WnXeGDDBepAMaD743cfAd_eJKryGzodIBp42BhY8IQAhTBOeM0cO5UE0SKXFgNIYeMhiDiY8TyNhYTNwtW-C4oBYa0kBTgWhqRrTcRQO7eH1M4k81s_rTmUrB8yEBnFFPsP--mR3M77LpvfLpV2Shfw2c6SVUZcEAFBxLOeehPZwT1VNRXhIbqh1wtsVGKs4jhrmYywc9nAvVFHvp2qbt0cBpqpirYwMgZpDMpq4ezoXqIQ93OxsH0MCZLEt9QoCKO4zNXlz0cE5Ujzy5rm2odkBjM2nu4Bq5C5WsPqQwMUZLPWSIllJ-JlpK-b5sLhkMN3ffrsN-z_iCeeqJDxrLI4GvxBDoRlvRQEO1Ij1DgtRyFz0eL_sgEzZUOuBMtUJ9ylQExJLPlqM9nAvV8wEiYZPLNXD2gghyIJiqM2fDTw_nRPUqRWFTjmqgwcCMmNvxRu5C5TUQ13RrQUUDx1QohNREpZU7UXlh_JU0VIJjtE3O7VzNgmkSZ-WyzcjNZUDAeCikF61g3N0NrDdiKz2Idurn_kBZxu9UtgzK1nCQP0LyiHBbhHk-5b9A9XeHC2uFi7ZBlUVx00hHlerpD0utiLbHvtG_odqWMI-qg-IXlEmeNZ33d19raD1MFysE-cgDEnKJyP_kWqNHuXEKV2umjca3RbBSftDaIqnqch2dw912w7iQix9wVXJBu7C0Sb0aaLo1w8aL-FbucjYuUp7R8NbGSKUDGqhQaabSyJ2oZNV6d7Wh0gFnyjzuUwQUCcYmb7dHOCeqVcHx556_9KezHQNhQOnQI_AHdQzv83_381dNXsoYWhhNA6eNpv5p08ByLmaTYw_nYrQrj1NucxmngaZTN7xGupM7UXlJKCM2VDqgqRCTE4WYdKRyOeOTTceigSYqppc4LbeiEuWVysNh_2n5uVe_tc-2jAOsqiLYtJmDQdUGI8AFge3N7XhQlVNEkvZFaTSIMCCCcgyboN3nol9M0UB-e4iDA_ntDaLPXZ255h-oqp6p2nO4yO0OkQ3ktw4dD-S30vl5WOAyn3gAU8rbGn00qJpvT516OFSQOlKKHgWqG8IeNA1iFSQ9DtuiYDyIASSQcTra2K0aJQP5LecMtXeLJc_jRVTEEpB5bTgfPF2p_lepVmVqPuZOvKaPx8ijdGj5blB1zlwgwhdf3_4F6FMQig.YWT3qA.-SS1cvLcBxilxdYh3A-Dlmzut6Y' \
+--data-raw '{
+  "bitlink": "bit.ly/34ubpm"
+}'
+
+Response:
+{
+    "deeplinks": [
+        {
+            "app_uri_path": "",
+            "bitlink": "bit.ly/34ubpm",
+            "created": "2021-10-11 19:48:42.012029",
+            "guid": "Ba1bc23dE4F",
+            "install_type": "",
+            "install_url": "",
+            "modified": "2021-10-11 19:48:42.012029"
+        }
+    ],
+    "long_url": "https://google.com",
+    "tags": []
+}
+
+5. Get Clicks for a Bitlink
+
+Request:
+curl --location --request GET 'http://127.0.0.1:5000/bitlinks/bit.ly/34ubpm/clicks' \
+--header 'Content-Type: application/json' \
+--header 'Cookie: session=.eJzVWd2OozYUfpUqF73pjMf_NkirSpXaPkDbq9EqAkISEgJMApmQ1bx7DTiaAIaxZ7sXHc1Njj_sz-ccnx_72yJMSpDWTxhm181u4X9brOK4SJNsf1r4z9-a4ebHwh8AHxbRMQ7KeKVGECeESux5WIkP-SpZJ0P529eHRZpnm2V1TNXItiyLk__0tMnzTRqDKD8s3h5uKxBahcVhTCUoCvV5siyCcqvmWDyMyelP78lhiNEjgo8I_YQ8n0qfYgCRknoKtqmSBvNbgMIIk9Xv9A8lTLJTGaTpsqyLuFvnJunI9zc5M__Hm35YlMGm2Z1Clmoz7Xp3mohXh2pvYRQNnNq38An0CQKEeoyjaf4DnJPRXjenk8FoY6odcOg_ykkI5GP_0XIXKqzC0issqGjg2JUJogYqWu5ChfMU1zanSgOnDQixTz0gCBKYzBmwh3OhKiLvAlMLqhpopvo34j7BPmQAI8IQnaI6wjlRrbcRD2yodkCDgaE0xqpW7kIlWKXn140FFQ00-RqDZl9Tcicqp31Sr8KpQKNRYV7B9GxBWAOnzCx8THxMAYMMMzxt5gHOZUNRlqbMxiM1cBxSiCeQKaS0chcqq22NrtWHKenpVObH-Ndk9QVhQhk3pSg91dRJlz4UPiNAcpVBbFNUccwPeRkvtXiUsW57K9KgBu8b7Og-qU2cnlZxGSTpqeGuRkBDuwZq5Odt-iXOlv_8NR10BpQdsl6rnVr9DopkcZcC_2yx9_ovi_MpH-jf4AkaZypOzKeslb85OEKFy_XFwic10HTesTCfdyV38sm6eqlLGyod0KQULM1KUXIXKmuR7QObNKeB07lD1U9YAKHOJ_XmckcP50J1U5w4jCyoauBMRmY-hIBgyqepjnAuVLc8qGObOkYDDfGPE2aMf43cico6T6RNmtPAaQMz0tQnDEkEZ7LGAOdEdZOvdkdjdNBDd-RafxeIQ3pP5V16N21WnXeGDDBepAMaD743cfAd_eJKryGzodIBp42BhY8IQAhTBOeM0cO5UE0SKXFgNIYeMhiDiY8TyNhYTNwtW-C4oBYa0kBTgWhqRrTcRQO7eH1M4k81s_rTmUrB8yEBnFFPsP--mR3M77LpvfLpV2Shfw2c6SVUZcEAFBxLOeehPZwT1VNRXhIbqh1wtsVGKs4jhrmYywc9nAvVFHvp2qbt0cBpqpirYwMgZpDMpq4ezoXqIQ93OxsH0MCZLEt9QoCKO4zNXlz0cE5Ujzy5rm2odkBjM2nu4Bq5C5WsPqQwMUZLPWSIllJ-JlpK-b5sLhkMN3ffrsN-z_iCeeqJDxrLI4GvxBDoRlvRQEO1Ij1DgtRyFz0eL_sgEzZUOuBMtUJ9ylQExJLPlqM9nAvV8wEiYZPLNXD2gghyIJiqM2fDTw_nRPUqRWFTjmqgwcCMmNvxRu5C5TUQ13RrQUUDx1QohNREpZU7UXlh_JU0VIJjtE3O7VzNgmkSZ-WyzcjNZUDAeCikF61g3N0NrDdiKz2Idurn_kBZxu9UtgzK1nCQP0LyiHBbhHk-5b9A9XeHC2uFi7ZBlUVx00hHlerpD0utiLbHvtG_odqWMI-qg-IXlEmeNZ33d19raD1MFysE-cgDEnKJyP_kWqNHuXEKV2umjca3RbBSftDaIqnqch2dw912w7iQix9wVXJBu7C0Sb0aaLo1w8aL-FbucjYuUp7R8NbGSKUDGqhQaabSyJ2oZNV6d7Wh0gFnyjzuUwQUCcYmb7dHOCeqVcHx556_9KezHQNhQOnQI_AHdQzv83_381dNXsoYWhhNA6eNpv5p08ByLmaTYw_nYrQrj1NucxmngaZTN7xGupM7UXlJKCM2VDqgqRCTE4WYdKRyOeOTTceigSYqppc4LbeiEuWVysNh_2n5uVe_tc-2jAOsqiLYtJmDQdUGI8AFge3N7XhQlVNEkvZFaTSIMCCCcgyboN3nol9M0UB-e4iDA_ntDaLPXZ255h-oqp6p2nO4yO0OkQ3ktw4dD-S30vl5WOAyn3gAU8rbGn00qJpvT516OFSQOlKKHgWqG8IeNA1iFSQ9DtuiYDyIASSQcTra2K0aJQP5LecMtXeLJc_jRVTEEpB5bTgfPF2p_lepVmVqPuZOvKaPx8ijdGj5blB1zlwgwhdf3_4F6FMQig.YWT3qA.-SS1cvLcBxilxdYh3A-Dlmzut6Y' \
+--data-raw '{
+  "units": "10",
+  "unit": "month",
+  "unit_reference":""
+}'
+
+Response:
+{
+    "link_clicks": [
+        {
+            "clicks": 4
+        }
+    ]
+}
