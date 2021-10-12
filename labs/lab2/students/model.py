@@ -1,11 +1,7 @@
 from marshmallow import Schema, fields
 
-
-class StudentSchema(Schema):
-    id = fields.Int()
-    first_name = fields.Str(required=True)
-    last_name = fields.Str(required=True)
-    sjsu_id = fields.Str(required=True)
-    email = fields.Email()
-    create_timestamp = fields.DateTime(format="timestamp")
-    update_timestamp = fields.DateTime(format="timestamp")
+class DeeplinkSchema(Schema):
+    long_url = fields.Str(required=True)
+    bitlink = fields.Str(required=True)
+    created = fields.Str(required=True)
+    modified = fields.Str(required=True)
