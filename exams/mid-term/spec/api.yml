@@ -1,0 +1,9 @@
+get:
+  summary: Root
+  operationId: index
+  response:
+    200:
+      content:
+        application/json
+          schema:
+            type: string
