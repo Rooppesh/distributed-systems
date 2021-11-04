@@ -74,7 +74,6 @@ def resolve_createStudent(*_, name):
         'name' : name
     }
     
-    print(session[str(studentID)+studentKey])
     return session[str(studentID)+studentKey]
 
 @query.field("classes")
